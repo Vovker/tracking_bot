@@ -8,10 +8,12 @@ const data = {
     recepients: [],
 }
 const notifyTime = '22:00';
+let chatId = '';
 
 bot.command('start', (ctx) => {
     data.chat_id = ctx.chat.id;
     ctx.reply('Hello, please enter recepients');
+    chatId = ctx.chat.id;
 })
 
 bot.command('add', (ctx) => {
@@ -24,7 +26,7 @@ bot.command('add', (ctx) => {
 })
 bot.command('notify', (ctx) => {
     if(ctx.from.username === 'uladzimirkavalchuk') {
-        ctx.telegram.sendMessage('-882950550', `Абалдуи, чем сегодня занимались? ${data.recepients.join(', ')}`);
+        ctx.telegram.sendMessage(chatId, `Абалдуи, чем сегодня занимались? ${data.recepients.join(', ')}`);
     } else {
         ctx.reply('You are not admin');
     }
