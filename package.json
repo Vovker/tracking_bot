@@ -1,0 +1,23 @@
+{
+  "name": "tracking_bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vovker/tracking_bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vovker/tracking_bot/issues"
+  },
+  "homepage": "https://github.com/Vovker/tracking_bot#readme",
+  "dependencies": {
+    "telegraf": "^4.11.2"
+  }
+}
